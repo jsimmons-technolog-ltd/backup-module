@@ -27,7 +27,7 @@ resource "aws_backup_plan" "this" {
       }
 
       dynamic "copy_action" {
-        for_each = try(lookup(rule.value.copy_action, "destination_vault", null), null) != null ? [true] : []
+        for_each = lookup(rule.value.copy_action, "destination_vault", null) != null ? [true] : []
         content {
           destination_vault_arn = lookup(rule.value.copy_action, "destination_vault", null)
 
