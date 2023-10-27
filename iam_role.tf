@@ -1,3 +1,4 @@
+/*
 data "aws_iam_policy_document" "assume_role" {
   statement {
     effect = "Allow"
@@ -22,3 +23,4 @@ resource "aws_iam_role_policy_attachment" "this" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup"
   role       = aws_iam_role.this[0].name
 }
+*/
