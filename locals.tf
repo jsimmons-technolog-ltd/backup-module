@@ -50,7 +50,7 @@ locals {
 
   dev_rules = []
 
-  prod_default = var.plan_name == "prod" ? local.prod_rules : []
+  prod_default = var.plan_name == "prod" ? local.prod_rules : ["","",""]
   dev_default  = var.plan_name == "dev" ? local.dev_rules : []
   custom       = var.plan_name != "dev" || "prod" ? var.rules : []
   rules        = concat(local.prod_default, local.dev_default, local.custom)
