@@ -4,12 +4,6 @@ variable "create_vault" {
   default     = true
 }
 
-variable "alternate_region_vault" {
-  description = "Determines if the vault created should be in your alternate region. A provider alias called \"backup-region\" must be created for the alternate region"
-  type        = bool
-  default     = false
-}
-
 variable "create_plan" {
   description = "Determines if a backup plan should be created"
   type        = bool
