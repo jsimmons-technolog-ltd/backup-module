@@ -55,6 +55,8 @@ resource "aws_backup_plan" "this" {
 }
 
 resource "aws_backup_selection" "this" {
+  count = var.create_plan ? 1 : 0
+
   iam_role_arn = aws_iam_role.this.arn
   name         = var.selection_name
   plan_id      = aws_backup_plan.this[0].id
