@@ -22,9 +22,15 @@ variable "plan_name" {
   default     = null
 }
 
+variable "rule_set" {
+  description = "The set of rules to use"
+  type = string
+  default = "custom"
+}
+
 variable "rules" {
   description = "List containing backup rules"
-  type        = list(object)
+  type        = list(any)
   default     = []
 }
 
