@@ -22,7 +22,7 @@ locals {
         }
 
         copy_action = {
-          destination_vault_arn = var.destination_vault
+          destination_vault = var.destination_vault
 
           lifecycle = {
             delete_after = 395
@@ -40,7 +40,7 @@ locals {
         }
 
         copy_action = {
-          destination_vault_arn = var.destination_vault
+          destination_vault = var.destination_vault
 
           lifecycle = {
             delete_after = 2555
