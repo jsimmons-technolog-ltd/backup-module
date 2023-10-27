@@ -24,7 +24,7 @@ variable "plan_name" {
 
 variable "rules" {
   description = "List containing backup rules"
-  type        = list(any)
+  type        = list(object)
   default     = []
 }
 
