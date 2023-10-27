@@ -27,7 +27,7 @@ module "aws-backup" = {
         cold_storage_after = 0
         delete_after       = 30
       }
-      copy_actions = {
+      copy_action = {
         destination_vault = * destination vault arn *
         lifecycle = {
           cold_storage_after = 0

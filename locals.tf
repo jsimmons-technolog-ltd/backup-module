@@ -21,7 +21,7 @@ locals {
           delete_after = 395
         }
 
-        copy_actions = {
+        copy_action = {
           destination_vault_arn = var.destination_vault
 
           lifecycle = {
@@ -39,7 +39,7 @@ locals {
           delete_after = 2555
         }
 
-        copy_actions = {
+        copy_action = {
           destination_vault_arn = var.destination_vault
 
           lifecycle = {
