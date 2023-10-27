@@ -20,6 +20,7 @@ locals {
         delete_after = 395
       }
 
+/*
       copy_actions = {
         destination_vault_arn = aws_backup_vault.cross_region.arn
 
@@ -27,6 +28,7 @@ locals {
           delete_after = 395
         }
       }
+*/
     },
     {
       rule_name         = "yearly-backups"
@@ -38,6 +40,7 @@ locals {
         delete_after = 2555
       }
 
+/*
       copy_actions = {
         destination_vault_arn = aws_backup_vault.cross_region.arn
 
@@ -45,6 +48,7 @@ locals {
           delete_after = 2555
         }
       }
+*/
     }
   ]
 
