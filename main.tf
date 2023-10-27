@@ -10,7 +10,7 @@ resource "aws_backup_plan" "this" {
   name  = var.plan_name
 
   dynamic "rule" {
-    for_each = length(lookup(local.rules[var.rule_set])) > 0 ? lookup(local.rules[var.rule_set]) : []
+    for_each = length(lookup(local.rules, var.rule_set, [])) > 0 ? lookup(local.rules, var.rule_set, []) : []
     content {
       rule_name         = lookup(rule.value, "rule_name", null)
       target_vault_name = aws_backup_vault.this[0].name
