@@ -1,5 +1,5 @@
 resource "aws_backup_vault" "this" {
-  provider = var.alternate_region_vault ? aws.backup-region : aws
+  provider = aws.backup-region #var.alternate_region_vault ? aws.backup-region : aws
   count    = var.create_vault ? 1 : 0
   name     = var.vault_name
 
