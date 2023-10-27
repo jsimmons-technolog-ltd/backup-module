@@ -59,7 +59,7 @@ resource "aws_backup_selection" "this" {
 
   iam_role_arn = aws_iam_role.this.arn
   name         = var.selection_name
-  plan_id      = aws_backup_plan.this[0].id
+  plan_id      = var.create_plan ? aws_backup_plan.this[0].id : ""
 
   selection_tag {
     type  = "STRINGEQUALS"
