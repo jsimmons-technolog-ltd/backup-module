@@ -7,3 +7,8 @@ terraform {
     }
   }
 }
+
+provider "aws" {
+  alias = "backup-region"
+  region = "eu-west-2"
+}
