@@ -10,6 +10,12 @@ variable "create_plan" {
   default     = true
 }
 
+variable "create_role" {
+  description = "Determins if a backup role should be created"
+  type        = bool
+  default     = true
+}
+
 variable "vault_name" {
   description = "Name for the backup vault"
   type        = string
@@ -24,8 +30,8 @@ variable "plan_name" {
 
 variable "rule_set" {
   description = "The set of rules to use"
-  type = string
-  default = "custom"
+  type        = string
+  default     = "custom"
 }
 
 variable "rules" {

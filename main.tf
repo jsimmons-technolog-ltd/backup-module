@@ -1,6 +1,6 @@
 resource "aws_backup_vault" "this" {
-  count    = var.create_vault ? 1 : 0
-  name     = var.vault_name
+  count = var.create_vault ? 1 : 0
+  name  = var.vault_name
 
   tags = var.tags
 }
